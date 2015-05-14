@@ -1,0 +1,82 @@
+<ion-side-menus enable-menu-with-back-views="false">
+
+    <ion-side-menu-content>
+
+        <ion-nav-bar class="bar-stable nav-title-slide-ios7">
+            <!--
+            <ion-nav-back-button class="button-clear">
+              <i class="icon ion-ios7-arrow-back"></i> Back
+            </ion-nav-back-button>-->
+            <ion-nav-buttons side="left">
+                <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+            </ion-nav-buttons>
+
+        </ion-nav-bar>
+
+        <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
+    </ion-side-menu-content>
+
+    <ion-side-menu side="left" expose-aside-when="large">
+        <ion-content>
+            <ion-list>
+                <!--
+                <ion-item item-icon-left nav-clear menu-close href="#/login">
+                  <i class="icon ion-log-in"></i>
+                  <span>Login</span>
+                </ion-item>
+                -->
+                <ion-item item-icon-left nav-clear menu-close href="#/app/home/products">
+                    <i class="icon ion-home"></i>
+                    <span>Home</span>
+                </ion-item>
+                <ion-item nav-clear menu-close href="#/app/myaccount">
+                    <i class="icon ion-ios7-person-outline"></i>
+                    <span>My Account</span>
+                </ion-item>
+                <!--
+                <ion-item nav-clear menu-close href="#/app/search">
+                  <i class="icon ion-ios7-paperplane-outline"></i>
+                  <span>Send Products</span>
+                </ion-item>
+                <ion-item nav-clear menu-close href="#/app/orderlists">
+                  <i class="icon ion-ios7-timer-outline"></i>
+                  <span>Order History</span>
+                </ion-item>
+                -->
+                <ion-item nav-clear menu-close href="#/app/buy/plan">
+                    <i class="icon ion-bag"></i>
+                    <span>Buy Credits</span>
+                </ion-item>
+                <!--
+                <ion-item nav-clear menu-close href="#/app/home/products">
+                  <i class="icon ion-ios7-information-outline"></i>
+                  <span>Registration Info</span>
+                </ion-item>
+                <ion-item nav-clear menu-close href="#/app/billinglists">
+                  <i class="icon ion-ios7-compose-outline"></i>
+                  <span>Billing History</span>
+                </ion-item>
+                -->
+                <ion-item nav-clear menu-close href="#/app/draftlist">
+                    <i class="icon ion-ios7-photos-outline"></i>
+                    <span>Drafts</span>
+                </ion-item>
+                <!--
+                <ion-item nav-clear menu-close href="#/app/home/products">
+                  <i class="icon ion-social-usd"></i>
+                  <span>Rate us</span>
+                </ion-item>
+                -->
+                <ion-item nav-clear menu-close href="#/app/about">
+                    <i class="icon ion-ios7-information-outline"></i>
+                    <span>About</span>
+                </ion-item>
+
+                <ion-item nav-clear menu-close href="#/login">
+                    <i class="icon ion-log-out"></i>
+                    <span>Logout</span>
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

@@ -1,0 +1,72 @@
+<ion-view title="">
+    <ion-content lazy-scroll ng-class="{addedTop :(postdroid.imageSource!=null && postdroid.imageSource!='')}">
+
+       <div id='injection_site'></div>
+       <p><input type='image' src='http://images.aviary.com/images/edit-photo.png' value='Edit photo' ng-click="launchEditor('image1', 'http://dplsystems.com.au/1.png');" /></p>
+
+        <img style="width: 100%;" id='image1' src='img/1.png'/>
+        
+        <div ng-if="(postdroid.imageSource==null || postdroid.imageSource=='')">
+            <ul class="product-list">
+                <li ng-repeat="item in socials">
+                    <div class="list card" ng-click="select_lib(item.name)">
+                        <div class="item item-image">
+                            <img ng-src="{{item.photo}}">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+ 
+        <!-- Add an edit button, passing the HTML id of the image and the public URL of the image -->
+     
+
+        <div ng-if="(postdroid.imageSource!=null && postdroid.imageSource!='')">
+            <div class="list card">
+                <ion-item class="item-image" style="border: solid 2px white; border-radius: 10px;">
+                    <img ng-src="{{postdroid.imageSource}}" src="img/lazy-loading.gif" class="full-image"
+                         id="full-photo">
+                </ion-item>
+            </div>
+        </div>
+    </ion-content>
+    <div class="abs-footer">
+        <ion-scroll direction="x" class="wide-as-needed">
+            <a class="button line-button"> button</a>
+            <a class="button line-button"> button</a>
+            <a class="button line-button"> button</a>
+            <a class="button line-button"> button</a>
+            <a class="button line-button"> button</a>
+            <a class="button line-button"> button</a>
+            <a class="button line-button"> button</a>
+            <a class="button line-button"> button</a>
+            <a class="button line-button"> button</a>
+            <a class="button line-button"> button</a>
+        </ion-scroll>
+        <ion-scroll direction="x" class="wide-as-needed">
+            <a class="button line-button"> button</a>
+            <a class="button line-button"> button</a>
+            <a class="button line-button"> button</a>
+            <a class="button line-button"> button</a>
+            <a class="button line-button"> button</a>
+            <a class="button line-button"> button</a>
+            <a class="button line-button"> button</a>
+            <a class="button line-button"> button</a>
+            <a class="button line-button"> button</a>
+            <a class="button line-button"> button</a>
+        </ion-scroll>
+        <ion-item class="tabs tabs-icon-bottom"
+                  ng-if="(postdroid.imageSource!=null && postdroid.imageSource!='')">
+            <a class="tab-item" ng-repeat="item in socials" ng-click="select_lib(item.name)">
+                <i class="icon {{item.icon}}"></i>
+                {{item.name}}
+            </a>
+        </ion-item>
+        <p>This Order will Use <span>{{postdroid.productTypeSelected.creditsReqd}}</span> Credits</p>
+
+        <div class="button-bar">
+            <a class="button " ng-click="save_draft()">Save</a>
+            <a class="button " ng-click="show_preview()">Preview</a>
+        </div>
+    </div>
+</ion-view>

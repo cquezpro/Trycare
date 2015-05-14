@@ -1,0 +1,32 @@
+<ion-view title="">
+    <ion-content padding="true">
+
+        <div class="list address-list">
+            <div class="item item-avatar item-icon-left" href="" ng-repeat="receiver in postdroid.recipients">
+                <label class="item item-text-wrap"><h2>{{receiver.firstName}} {{receiver.lastName}} </h2>
+                    {{receiver.address1}} {{receiver.address2}} {{receiver.city}}
+                    {{receiver.state}}
+                    {{receiver.country}}
+                    {{receiver.postalCode}}
+                    <button class="button button-energized button-small" ng-click="remove_recipient($index)">
+                        Remove
+                    </button>
+                </label>
+                <i class="icon ion-ios7-location-outline"></i>
+            </div>
+        </div>
+        <div class="item">
+            <a class="button button-positive" href="#/address-add">Add Recipients</a>
+        </div>
+        <div style="height:80px"></div>
+    </ion-content>
+    <div class="abs-footer">
+        <p>This Order will Use <span>{{postdroid.productTypeSelected.creditsReqd}}</span> Credits</p>
+
+        <div class="button-bar">
+            <a class="button " ng-click="save_draft()">Save</a>
+            <a class="button " ng-click="show_preview()">Preview</a>
+        </div>
+    </div>
+
+</ion-view>

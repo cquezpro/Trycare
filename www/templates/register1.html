@@ -1,0 +1,50 @@
+<ion-view>
+  <ion-header-bar>
+    <h1 class="title"></h1>
+    <div class="text-center" style="width:100%">
+            <img src="img/postdroidicon.png" style="width:32px;height: 32px;"/>
+    </div>
+     <div class="buttons">
+      <a class="button button-icon icon ion-ios7-close-empty" href="#/register" >
+      </a>
+    </div>
+  </ion-header-bar>
+  <ion-content class="padding">
+    <form ng-submit="doRegister2()" class="login-form">
+      <div class="list">
+        <label class="item item-input">
+          <input type="text" ng-model="regData.address" placeholder="Address" >
+        </label>
+        <label class="item item-input">
+          <input type="text" ng-model="regData.address1" placeholder="Address 1">
+        </label>
+        <label class="item item-input">
+          <input type="text" ng-model="regData.city" placeholder="City">
+        </label>
+        <label class="item item-input">
+          <input type="text" ng-model="regData.state" placeholder="State">
+        </label>
+        <label class="item item-input">
+          <input type="text" ng-model="regData.postalcode" placeholder="Postal Code">
+        </label>
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Country
+          </div>
+          <select ng-model="regData.country" ng-options="key as val for (key, val) in countryList">
+          </select>
+        </label>
+
+        <ion-checkbox ng-model="regData.agreed">Agree terms & condition</ion-checkbox>
+
+        <label class="item">
+          <button class="button button-block button-positive" type="submit">
+            Register
+          </button>
+        </label>
+
+      </div>
+    </form>
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,23 @@
+<ion-view>
+    <ion-header-bar>
+        <h1 class="title">{{"EXISTING_RECIPIENTS_TEXT" | translate}}</h1>
+
+        <div class="buttons">
+            <a class="button button-icon icon ion-ios7-close-empty" ng-click="$ionicGoBack()">
+            </a>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+
+        <ion-list class="order-list">
+            <ion-item ng-repeat="item in appUser.recipients" ng-click="select_user(item.id)">
+                <h2>{{item.firstName}} {{item.lastName}} </h2>
+
+                <p>{{item.address1}} {{item.address2}} {{item.city}} {{item.state}} {{countryList[item.country]}} {{item.postalCode}}</p>
+            </ion-item>
+            <ion-item ng-if="msg.length>0" class="text-center">
+                {{msg}}
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

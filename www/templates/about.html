@@ -1,0 +1,37 @@
+<ion-view title="{{'ABOUT_TEXT' | translate}}">
+    <ion-nav-buttons side="right">
+        <a class="button button-icon icon ion-ios7-arrow-thin-left" ng-click="$ionicGoBack()"></a>
+    </ion-nav-buttons>
+    <div class="text-center" style="width:100%;margin-top:5px">
+        <img src="img/postdroidicon.png" style="width:32px;height: 32px;"/>
+    </div>
+    <ion-content class="padding" has-header="true">
+        <label class="item item-text-wrap">
+            <p>{{"APP_VERSION" | translate}}</p>
+        </label>
+        <label class="item item-text-wrap">
+            <p>{{"ABOUT_DESCRIPTION" | translate}}</p>
+        </label>
+        <div class="fb-page" data-href="https://www.facebook.com/pages/Postdroid/187313034249" data-width="280" data-height="250" data-hide-cover="false" data-show-facepile="true" data-show-posts="false">
+            <div class="fb-xfbml-parse-ignore">
+                <blockquote cite="https://www.facebook.com/pages/Postdroid/187313034249">
+                    <a onclick="window.open('https://www.facebook.com/pages/Postdroid/187313034249', '_system', 'location=yes'); return false;" href="#">Postdroid</a>
+                </blockquote>
+            </div>
+        </div>
+
+        <a style="text-decoration: underline;  padding-top: 0px;" class="item" href="#" data-icon="link" 
+                  ng-click="rateUs();">
+            {{"RATE_US" | translate}}
+        </a>
+        <a style="text-decoration: underline;  padding-top: 0px;" class="item" href="#" data-icon="link" 
+                  onclick="cordova.plugins.email.open({to:'admin@postdroid.com', subject: 'Contact us',  body: '', isHtml:  true});">
+            {{"CONTACT_US" | translate}}
+        </a>
+        <a style="text-decoration: underline;  padding-top: 0px;" class="item" href="#" data-icon="link"
+           onclick="window.open('http://sales.postdroid.com/privacy-policy/', '_system', 'location=yes'); return false;">
+            {{"APP_PRIVACY_POLICY" | translate}}
+        </a>
+    </ion-content>
+</ion-view>
+

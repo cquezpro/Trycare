@@ -1,0 +1,48 @@
+<ion-view>
+    <!--<ion-header-bar>
+        <h1 class="title top_title">Login</h1>
+        <div class="text-center" style="width:100%">
+            <img src="img/postdroidicon.png" style="width:32px;height: 32px;"/>
+        </div>
+    </ion-header-bar>-->
+    <ion-content class="padding">
+        <div class="text-right">
+            <!--
+              <button class="button button-energized button-small" ng-click="offline()">
+                Offline mode
+              </button> -->
+        </div>
+        <div class="text-center">
+            <h1 style="font-size: 35px;">Trycare</h1>
+        </div>
+        <form ng-submit="doLogin()" class="login-form">
+            <div class="list">
+                <label class="item item-input">
+                    <i class="icon ion-ios7-person-outline placeholder-icon"></i>
+                    <input type="text" ng-model="loginData.username" placeholder="User Name">
+                </label>
+                <label class="item item-input">
+                    <i class="icon ion-ios7-locked-outline placeholder-icon"></i>
+                    <input type="password" ng-model="loginData.password" placeholder="Password">
+                </label>
+            </div>
+            <!--<div class="text-right">
+                <a href="#/forget">Forgot password</a>
+            </div>-->
+            <!--<div>
+                <br>
+                <ion-checkbox ng-model="loginData.remember">Remember me on this device</ion-checkbox>
+            </div>-->
+            <button class="button icon-left ion-log-in button-block button-positive" type="submit">
+                Log in
+            </button>
+            <!--<div class="item">
+                <a href="#/register" class="register">
+                    <i class="icon ion-person-add"></i>
+                    New User Register
+                </a>
+            </div>-->
+        </form>
+
+    </ion-content>
+</ion-view>

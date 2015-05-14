@@ -1,0 +1,50 @@
+<style>
+    .button  {
+        font-size: 12px !important;
+    }
+    .buttons {
+        position: fixed;
+        bottom: 10px;  
+        width: 100%;  
+    }
+    .item-divider {
+        font-size: 20px;
+    }
+    .item-input {
+        margin: 0 0 0 0px !important;                
+    }
+    .input-label {
+        color: white;
+    }
+    .card {
+        color: white;
+        background-color: rgba(147, 112, 72, 0.4);
+    }
+</style>
+<ion-view>
+    <ion-content class="padding">
+        <div class="text-center">
+          <h1 style="font-size: 30px;">Products</h1>
+        </div>
+        <div class="card" ng-repeat="product in $root.basketList">
+            <label class="item item-input">
+              <span class="input-label">{{product.ProductName | maxLength: 30}}</span>
+              <span>x {{product.quantity}}</span>
+            </label>            
+        </div>
+    </ion-content>
+     <div class="form buttons">
+            <div class="row">
+                <div class="col">
+                     <button class="button icon-left ion-bag button-block button-positive"  ui-sref="main">
+                       <span>Add Products</span>
+                     </button>
+                </div>  
+                <div class="col"> 
+                   <button class="button icon-left ion-ios7-cloud-upload-outline button-block button-positive">
+                      Submit Order
+                   </button>
+                </div>
+            </div>
+    </div>
+</ion-view>

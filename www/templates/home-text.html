@@ -1,0 +1,28 @@
+<ion-view title="">
+    <ion-content padding="true">
+        <div class="text-right padding">
+            <p>
+                <span class="badge badge-assertive">{{linesleft}}</span>
+                lines left, <span class="badge badge-assertive">{{txtleft}}</span>
+                characters left
+            </p>
+        </div>
+        <div class="list" style="background-color: lightyellow;">
+            <label class="item-input">
+                <textarea rows="11" msd-elastic ng-model="postdroid.message"
+                          style="color: black;overflow: auto;"
+                          placeholder="What do you want to say?" maxlength="350" ng-change="limitTextarea(12,350)"
+                          autofocus></textarea>
+            </label>
+        </div>
+    </ion-content>
+    <div class="abs-footer">
+        <p>This Order will Use <span>{{postdroid.productTypeSelected.creditsReqd}}</span> Credits</p>
+
+        <div class="button-bar">
+            <a class="button " ng-click="save_draft()">Save</a>
+            <a class="button " ng-click="show_preview()">Preview</a>
+        </div>
+    </div>
+
+</ion-view>

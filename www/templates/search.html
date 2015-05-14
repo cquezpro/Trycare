@@ -1,0 +1,71 @@
+<style>
+  .search-btn  {
+    margin: 0px !important;
+    padding: 0px;
+    height: 35px;
+    min-height: 35px;
+    font-size: 14px;
+    line-height: 35px;
+  }
+  #search_txt {
+    padding-left: 10px;
+  }
+  .back-btn {
+    position: absolute;
+    bottom: 15px;
+  }
+  .result {
+    border: solid 1px grey;
+    padding: 0px;
+    height: 300px;
+  }
+  .result .row {
+    padding: 0px;
+  }
+  .result .head {
+    background: rgb(113, 107, 107);
+  }
+  .result .col {
+    padding-left:10px;
+  }
+</style>
+<ion-view>
+    <ion-content class="padding">
+      <div class="text-center">
+          <h1 style="font-size: 35px;">Trycare</h1>
+      </div>
+      <div class="row">
+            <div class="col-67"> 
+               <input ng-model="form.search_txt" id="search_txt" type="search" placeholder="Search a Product" />
+            </div>
+            <div class="col-10">
+            </div> 
+            <div class="col-20">
+                 <button class="search-btn button button-block button-positive">
+                   Search 
+                 </button>
+            </div>
+      </div>
+        <div class="result list">
+          <div class="row head">
+            <div class="col-33 col" style="border-right:solid 1px grey">Reference</div>
+            <div class="col-67 col">Name</div>
+          </div>
+          <ion-scroll zooming"true" direction="y" style="height: 250px">
+            <div bindonce class="row" ng-repeat="product in productList | filter: form.search_txt">
+              <div class="col-33 col">{{product.Id}}</div>
+              <div class="col-67 col">{{product.ProductName}}</div>
+            </div>            
+          </ion-scroll>
+        </div>
+    </ion-content>
+    <div class="row back-btn">
+        <div class="col-25"> 
+        </div>
+        <div class="col-50"> 
+           <button class="button icon-left ion-arrow-left-a button-block button-positive" ui-sref="main">
+              Go Back
+           </button>
+        </div>
+    </div>
+</ion-view>

@@ -1,0 +1,36 @@
+<ion-view title="">
+    <ion-header-bar>
+
+        <div class="head_info">
+            <h3>Hi, {{appUser.firstName}} {{appUser.lastName}}</h3>
+
+            <p>You have <span>{{appUser.creditsLeft}}</span> credit left</p>
+        </div>
+    </ion-header-bar>
+    <div class="text-center" style="width:100%;margin-top:5px">
+            <img src="img/postdroidicon.png" style="width:32px;height: 32px;"/>
+    </div>
+
+    <ion-tabs class="tabs-stable tabs-icon-top tabs-top">
+
+        <ion-tab title="Choose Product" icon="ion-ios7-navigate-outline" href="#/app/home/products">
+            <ion-nav-view name="home-products"></ion-nav-view>
+        </ion-tab>
+
+        <ion-tab title="Choose Photo" icon="ion-images" href="#/app/home/photos">
+            <ion-nav-view name="home-photo"></ion-nav-view>
+        </ion-tab>
+
+        <ion-tab title="Address" icon="ion-ios7-location" href="#/app/home/address">
+            <ion-nav-view name="home-address"></ion-nav-view>
+        </ion-tab>
+
+        <ion-tab ng-if="(postdroid.productTypeSelected.title=='Postcard')" title="Add text" icon="ion-edit"
+                 href="#/app/home/text">
+            <ion-nav-view name="home-text"></ion-nav-view>
+        </ion-tab>
+
+    </ion-tabs>
+
+
+</ion-view>

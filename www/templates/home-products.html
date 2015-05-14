@@ -1,0 +1,26 @@
+<ion-view title="">
+    <ion-content padding="true">
+
+        <ul class="product-list">
+            <li ng-repeat="item in products" ng-class="{'selected':item.selected}">
+                <div class="list card" ng-click="select_item(item.key)">
+                    <p><span>{{item.title}}</span></p>
+                    <div class="item item-image">
+                        <img ng-src="{{item.photo}}">
+                    </div>
+                    <p><span>{{item.creditsReqd}} Credits</span></p>
+                </div>
+            </li>
+        </ul>
+
+        <div style="height:60px"></div>
+    </ion-content>
+    <div class="abs-footer">
+        <p>This Order will Use <span>{{postdroid.productTypeSelected.creditsReqd}}</span> Credits</p>
+
+        <div class="button-bar">
+            <a class="button " ng-click="save_draft()">Save</a>
+            <a class="button " ng-click="show_preview()">Preview</a>
+        </div>
+    </div>
+</ion-view>

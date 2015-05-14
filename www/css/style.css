@@ -1,0 +1,44 @@
+.selected  {
+    color: green;
+    font-weight: bold;
+    background: green;
+    border: green;
+}
+
+.bar .title {
+	text-align: left;
+}
+
+.top_title {
+	left: 0px !important;
+	right: 0px !important;
+}
+
+.abs-footer  {
+	bottom: 40px !important;
+}
+
+.addedTop {
+	top: 45px !important;	
+}
+
+.wide-as-needed {
+	overflow: scroll;
+	white-space: nowrap;
+}
+.scroll {
+	min-width: 100%;
+}
+
+.avpw_is_fullscreen #avpw_controls {
+	left : 0% !important;
+	width: 100% !important;
+	min-width: initial;
+}
+#avpw_tool_container {
+	min-width: initial !important;
+}
+
+#avpw_canvas_element {
+	width: 100%;
+}

@@ -1,0 +1,63 @@
+<ion-view>
+    <ion-header-bar>
+        <h1 class="title"></h1>
+
+        <div class="buttons">
+            <a class="button button-icon icon ion-ios7-close-empty" href="#/app/home/address">
+            </a>
+        </div>
+    </ion-header-bar>
+    <ion-content class="padding">
+        <div class="button-bar multi-line-btnbar">
+            <a class="button button-energized" ng-click="getExistReceivers()">
+                {{"SELECT_FROM_TEXT" | translate}} <br>{{"PREVIOUSLY_SENT_TEXT" | translate}}
+            </a>
+        </div>
+        <div class="text-right">
+            {{"DELIVERY_TAKE_TEXT" | translate}}
+        </div>
+
+        <form ng-submit="doAddReceiver()" class="form">
+            <div class="list">
+                <label class="item item-input">
+                    <input type="text" ng-model="receiver.firstName"
+                           placeholder="{{'FIRST_NAME_TEXT' | translate}}">
+                </label>
+                <label class="item item-input">
+                    <input type="text" ng-model="receiver.lastName" placeholder="{{'LAST_NAME_TEXT' | translate}}">
+                </label>
+                <label class="item item-input">
+                    <input type="text" ng-model="receiver.address1" placeholder="{{'ADDRESS_ONE_TEXT' | translate}}">
+                </label>
+                <label class="item item-input">
+                    <input type="text" ng-model="receiver.address2" placeholder="{{'ADDRESS_TWO_TEXT' | translate}}">
+                </label>
+                <label class="item item-input">
+                    <input type="text" ng-model="receiver.city" placeholder="{{'CITY_TEXT' | translate}}">
+                </label>
+                <label class="item item-input">
+                    <input type="text" ng-model="receiver.state" placeholder="{{'STATE_TEXT' | translate}}">
+                </label>
+
+                <label class="item item-input item-select">
+                    <div class="input-label">
+                        {{"COUNTRY_TEXT" | translate}}
+                    </div>
+                    <select ng-model="receiver.country" ng-options="key as val for (key, val) in countryList">
+                    </select>
+                </label>
+                <label class="item item-input">
+                    <input type="text" ng-model="receiver.postalCode" placeholder="{{'POSTAL_CODE_TEXT' | translate}}">
+                </label>
+
+                <label class="item">
+                    <button class="button button-block button-positive" type="submit">
+                        {{"CONTINUE_TEXT" | translate}}
+                    </button>
+                </label>
+
+            </div>
+        </form>
+
+    </ion-content>
+</ion-view>

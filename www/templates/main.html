@@ -1,0 +1,32 @@
+<style>
+  .button  {
+      font-size: 12px !important;
+  }
+</style>
+<ion-view>
+    <ion-content class="padding">
+        <div class="text-center">
+            <h1 style="font-size: 35px;">Trycare</h1>
+        </div>
+        <div class="login-form">
+            <div class="row"> 
+                <div class="col"> 
+                   <button class="button icon-left ion-search button-block button-positive" ng-click="scanBarcode();">
+                      Scan Barcode
+                   </button>
+                </div>
+                <div class="col"> 
+                     <button class="button icon-left ion-search button-block button-positive" ui-sref="basket">
+                       View Basket
+                     </button>
+                </div>
+            </div>
+            <button class="button icon-left ion-search button-block button-positive" ui-sref="search">
+                Search for Product
+            </button>
+            <button class="button icon-left ion-log-out button-block button-positive" ui-sref="login">
+                Log Out
+            </button>            
+        </div>
+    </ion-content>
+</ion-view>
